@@ -25,7 +25,7 @@ app.post('/send-email', (req, res) => {
     /* Sender email */
     from: 'spahiuensar@gmail.com',
     /* Recipient email */
-    to: 'ensar.spahiu@hotmail.com',
+    to: 'contact@nexiphor.com',
     subject: 'Contact Form Submission',
     text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}\nInterests: ${interests}`
   };
