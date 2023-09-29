@@ -11,19 +11,18 @@ app.use(bodyParser.json());
 async function sendEmail(name, email, message, interests, res) {
   try {
     const transporter = nodemailer.createTransport({
-      service: 'Gmail',
+      service: 'Outlook', // Update the service to Outlook (Hotmail)
       auth: {
-        user: 'spahiuensar@gmail.com',
-        /* Generated password */
-        pass: 'rjncgudldidxltgs',
+        user: 'ensar.spahiu@hotmail.com',
+        pass: 'Ensarspahiu1',
       },
     });
 
     const mailOptions = {
       /* Sender email */
-      from: 'spahiuensar@gmail.com',
+      from: 'ensar.spahiu@hotmail.com', // Update to your Hotmail email
       /* Recipient email */
-      to: 'contact@nexiphor.com,dorantdushi@gmail.com,ensar.spahiu@hotmail.com',
+      to: 'contact@nexiphor.com,dorantdushi@gmail.com,spahiuensar@gmail.com',
       subject: 'Contact Form Submission',
       text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}\nInterests: ${interests}`,
     };
