@@ -30,6 +30,9 @@ async function sendEmail(name, email, message, interests, res) {
 
     const info = await transporter.sendMail(mailOptions);
     console.log('Email sent:', info.response);
+
+    res.setHeader('Cache-Control', 'no-store');
+
     res.send('Email sent successfully');
   } catch (error) {
     console.error('Error sending email:', error);
