@@ -5,19 +5,20 @@ const nodemailer = require('nodemailer');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+
 app.use(cors());
 app.use(bodyParser.json());
 
+const transporter = nodemailer.createTransport({
+  service: 'Outlook',
+  auth: {
+    user: 'ensar.spahiu@hotmail.com',
+    pass: 'Ensarspahiu1',
+  },
+});
+
 async function sendEmail(name, email, message, interests, res) {
   try {
-    const transporter = nodemailer.createTransport({
-      service: 'Outlook', // Update the service to Outlook (Hotmail)
-      auth: {
-        user: 'ensar.spahiu@hotmail.com',
-        pass: 'Ensarspahiu1',
-      },
-    });
-
     const mailOptions = {
       /* Sender email */
       from: 'ensar.spahiu@hotmail.com', // Update to your Hotmail email
