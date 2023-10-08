@@ -46,6 +46,11 @@ app.post('/send-email', (req, res) => {
   sendEmail(name, email, message, interests, res);
 });
 
+/* Warm-up endpoint */
+app.get('/warm-up', (req, res) => {
+  res.send('Server is awake and warmed up.');
+});
+
 /* Start the server */
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
