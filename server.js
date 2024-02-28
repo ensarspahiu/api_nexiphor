@@ -10,10 +10,10 @@ app.use(cors());
 app.use(bodyParser.json());
 
 const transporter = nodemailer.createTransport({
-  service: 'Outlook',
+  service: 'gmail',
   auth: {
-    user: 'ensar.spahiu@hotmail.com',
-    pass: 'Ensarspahiu1',
+    user: 'contact@nexiphor.com',
+    pass: 'fywbxezvlqnkppvf',
   },
 });
 
@@ -21,9 +21,9 @@ async function sendEmail(name, email, message, interests, res) {
   try {
     const mailOptions = {
       /* Sender email */
-      from: 'ensar.spahiu@hotmail.com', // Update to your Hotmail email
+      from: 'contact@nexiphor.com', // Update to your Hotmail email
       /* Recipient email */
-      to: 'contact@nexiphor.com,dorantdushi@gmail.com,spahiuensar@gmail.com',
+      to: 'contact@nexiphor.com,dorantdushi@gmail.com',
       subject: 'Contact Form Submission',
       text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}\nInterests: ${interests}`,
     };
