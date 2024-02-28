@@ -13,7 +13,7 @@ const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
     user: 'contact@nexiphor.com',
-    pass: 'fywbxezvlqnkppvf',
+    pass: 'pjhmbaahmhlwrvhg',
   },
 });
 
@@ -21,7 +21,7 @@ async function sendEmail(name, email, message, interests, res) {
   try {
     const mailOptions = {
       /* Sender email */
-      from: 'contact@nexiphor.com', // Update to your Hotmail email
+      from: 'contact@nexiphor.com',
       /* Recipient email */
       to: 'contact@nexiphor.com,dorantdushi@gmail.com',
       subject: 'Contact Form Submission',
